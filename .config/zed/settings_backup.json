@@ -8,6 +8,24 @@
 // from the command palette or from `Zed` application menu.
 
 {
+  "agent_servers": {
+    "pi-acp": {
+      "type": "registry"
+    }
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "git_panel": {
+    "dock": "left"
+  },
+  "audio": {
+    "experimental.legacy_audio_compatible": true,
+    "experimental.rodio_audio": true
+  },
   "base_keymap": "VSCode",
   "disable_ai": false,
   "edit_predictions": {
@@ -25,6 +43,7 @@
     "coloring": "fixed"
   },
   "agent": {
+    "dock": "right",
     "inline_assistant_model": {
       "provider": "copilot_chat",
       "model": "claude-sonnet-4.5"
@@ -38,8 +57,17 @@
     "model_parameters": []
   },
   "languages": {
+    "TypeScript": {
+      "language_servers": ["pi-probe", "..."]
+    },
+    "TSX": {
+      "language_servers": ["pi-probe", "..."]
+    },
+    "JavaScript": {
+      "language_servers": ["pi-probe", "..."]
+    },
     "Python": {
-      "language_servers": ["ruff", "pyright"],
+      "language_servers": ["ruff", "ty"],
       "format_on_save": "on",
       "formatter": [
         { "code_action": "source.organizeImports.ruff" },
@@ -55,7 +83,7 @@
   "preview_tabs": {
     "enabled": true,
     "enable_preview_from_file_finder": true,
-    "enable_preview_from_code_navigation": false
+    "enable_keep_preview_on_code_navigation": false
   },
   "vim_mode": true,
   "active_pane_modifiers": {
@@ -71,10 +99,18 @@
           }
         }
       }
+    },
+    "pi-probe": {
+      "command": ["node", "/home/adithya/projects/pi-probe/lsp-server.mjs"],
+      "env": {
+        "UNDERSTANDING_FILE": "/home/adithya/projects/pi-probe/function-understanding.jsonl"
+      },
+      "languages": ["TypeScript", "TSX", "JavaScript", "JSX", "Haskell", "Markdown", "Rust", "Python", "Go", "C", "C++", "Ruby"]
     }
   },
   "relative_line_numbers": "enabled",
   "project_panel": {
+    "dock": "left",
     "entry_spacing": "standard"
   },
   "ui_font_size": 15,
@@ -86,6 +122,6 @@
   "theme": {
     "mode": "system",
     "light": "Gruvbox Light",
-    "dark": "Matugen Dark"
+    "dark": "Gruvbox Dark Hard"
   }
 }

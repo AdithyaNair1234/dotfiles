@@ -8,6 +8,20 @@
 // from the command palette or from `Zed` application menu.
 
 {
+  "agent_servers": {
+    "pi-acp": {
+      "type": "registry"
+    }
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "git_panel": {
+    "dock": "left"
+  },
   "audio": {
     "experimental.legacy_audio_compatible": true,
     "experimental.rodio_audio": true
@@ -15,10 +29,8 @@
   "base_keymap": "VSCode",
   "disable_ai": false,
   "edit_predictions": {
+    "provider": "copilot",
     "mode": "subtle"
-  },
-  "features": {
-    "edit_prediction_provider": "copilot"
   },
   "tab_bar": {
     "show": true
@@ -29,6 +41,10 @@
     "coloring": "fixed"
   },
   "agent": {
+    "tool_permissions": {
+      "default": "allow"
+    },
+    "dock": "right",
     "inline_assistant_model": {
       "provider": "copilot_chat",
       "model": "claude-sonnet-4.5"
@@ -38,12 +54,23 @@
       "provider": "copilot_chat",
       "model": "claude-sonnet-4.5"
     },
-    "always_allow_tool_actions": true,
     "model_parameters": []
   },
   "languages": {
+    "TypeScript": {
+      "language_servers": ["typescript-language-server", "eslint", "pi-probe"]
+    },
+    "TSX": {
+      "language_servers": ["typescript-language-server", "eslint", "pi-probe"]
+    },
+    "JavaScript": {
+      "language_servers": ["typescript-language-server", "eslint", "pi-probe"]
+    },
+    "JSX": {
+      "language_servers": ["typescript-language-server", "eslint", "pi-probe"]
+    },
     "Python": {
-      "language_servers": ["ruff", "ty"],
+      "language_servers": ["ruff", "ty", "pi-probe"],
       "format_on_save": "on",
       "formatter": [
         { "code_action": "source.organizeImports.ruff" },
@@ -54,6 +81,27 @@
           }
         }
       ]
+    },
+    "Haskell": {
+      "language_servers": ["haskell-language-server", "pi-probe"]
+    },
+    "Markdown": {
+      "language_servers": ["marksman", "pi-probe"]
+    },
+    "Rust": {
+      "language_servers": ["rust-analyzer", "pi-probe"]
+    },
+    "Go": {
+      "language_servers": ["gopls", "pi-probe"]
+    },
+    "C": {
+      "language_servers": ["clangd", "pi-probe"]
+    },
+    "C++": {
+      "language_servers": ["clangd", "pi-probe"]
+    },
+    "Ruby": {
+      "language_servers": ["solargraph", "pi-probe"]
     }
   },
   "preview_tabs": {
@@ -75,10 +123,21 @@
           }
         }
       }
+    },
+    "pi-probe": {
+      "binary": {
+        "path": "/usr/bin/node",
+        "arguments": ["/home/adithya/projects/pi-probe/lsp-server.mjs"]
+      },
+      "env": {
+        "UNDERSTANDING_FILE": "/home/adithya/projects/pi-probe/function-understanding.jsonl"
+      },
+      "languages": ["TypeScript", "TSX", "JavaScript", "JSX", "Haskell", "Markdown", "Rust", "Python", "Go", "C", "C++", "Ruby"]
     }
   },
   "relative_line_numbers": "enabled",
   "project_panel": {
+    "dock": "left",
     "entry_spacing": "standard"
   },
   "ui_font_size": 15,
