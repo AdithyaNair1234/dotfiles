@@ -1,0 +1,5 @@
+accent = "rgb(35f038)"
+bgMuted = "rgb(222522)"
+bgMutedPlus = "rgb(303230)"
+bg = "rgb(111111)"
+fg = "rgb(cfdfd5)"
