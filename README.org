@@ -1,7 +1,5 @@
 * MATERIAL ME
 
-[[file:./assets/main.jpeg]]
-
 I use =stow= to manage my dotfiles. I've structured things such that everything is symlinked to =.config= with one command:
 
 #+begin_src sh

@@ -1,7 +1,6 @@
-font-family = "CaskaydiaCove Nerd Font"
+font-family = "BlexMono Nerd Font"
 resize-overlay = "never"
-background-opacity = 0.9
-font-size = 13.5
-theme = "atlas"
+font-size = 14
+theme = "ef-bio"
 command = fish --login --interactive
 shell-integration-features = ssh-env

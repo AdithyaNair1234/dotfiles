@@ -6,26 +6,11 @@
 		"clock",
 	],
 	"modules-center": [
-		"hyprland/workspaces",
-		"group/tools"
+		"hyprland/workspaces"
 	],
 	"modules-right": [
 		"group/quicksettings"
 	],
-	"group/tools": {
-		"orientation": "horizontal",
-		"drawer": {
-			"transition-duration": 600,
-			"transition-left-to-right": false,
-			"click-to-reveal": false
-		},
-		"modules": [
-			"custom/expand",
-			"custom/colorpicker",
-			"custom/screenshot",
-			"idle_inhibitor"
-		]
-	},
 	"group/quicksettings": {
 		"orientation": "horizontal",
 		"modules": [

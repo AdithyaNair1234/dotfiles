@@ -1,9 +1,9 @@
-@import "atlas.css";
+@import "ef-bio.css";
 
 window {
     all: unset;
     border: none;
-    font-family: "CaskaydiaCove Nerd Font";
+    font-family: "Blex Mono Nerd Font";
     font-weight: 600;
     color: @fg;
 }
@@ -68,62 +68,6 @@ window#waybar {
     margin: 0 6px;
 }
 
-#power-profiles-daemon {
-    transition: all 0.3s ease-in-out;
-}
-
-#power-profiles-daemon.performance {
-    margin: 0 6px;
-    min-width: 16px;
-    color: @red;
-    transition: background 0.3s ease-in-out;
-}
-
-#power-profiles-daemon.power-saver {
-    margin: 0 6px;
-    min-width: 16px;
-    color: @green;
-    transition: background 0.3s ease-in-out;
-}
-
-#custom-nightlight {
-    margin: 0 6px;
-    min-width: 16px;
-    transition: all 0.3s ease-in-out;
-}
-
-#tray {
-    margin: 0 6px;
-    transition: all 0.3s ease-in-out;
-}
-
-#tray menu {
-    background: @surface;
-    padding: 12px;
-}
-
-#tray menu * {
-    margin: 2px;
-    padding: 2px;
-}
-
-#tray menu *:hover {
-    background: @surface_container;
-}
-
-/*---------Middle Module-----------------*/
-
-/* #tools {} */
-
-#idle_inhibitor {
-    margin: 0 6px;
-    transition: all 0.3s ease-in-out;
-}
-
-#idle_inhibitor.activated {
-    color: @orange;
-}
-
 #clock {
     padding: 0 12px;
     background: @bg;
@@ -138,6 +82,7 @@ window#waybar {
 
 #workspaces button.active {
     background-color: @accent;
+    color: @bg;
 }
 
 #workspaces button:hover {
