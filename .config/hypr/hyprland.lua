@@ -1,5 +1,7 @@
 require('apps')
 
+require('env')
+
 require('autostart')
 
 require('keybinds')

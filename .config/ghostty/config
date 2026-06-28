@@ -1,6 +1,8 @@
-font-family = "BlexMono Nerd Font"
 resize-overlay = "never"
-font-size = 14
+font-size = 12
+font-family = BlexMono Nerd Font Mono
 theme = "ef-bio"
 command = fish --login --interactive
 shell-integration-features = ssh-env
+adjust-cell-height = 0
+adjust-cell-width = 0

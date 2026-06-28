@@ -8,6 +8,12 @@
 // from the command palette or from `Zed` application menu.
 
 {
+  "language_models": {
+    "opencode": {
+      "show_free_models": false,
+      "show_zen_models": false
+    }
+  },
   "agent_servers": {
     "pi-acp": {
       "type": "registry"

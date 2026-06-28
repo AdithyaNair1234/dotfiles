@@ -5,7 +5,7 @@ hl.config({
 	border_size = 1,
 	col = {
 	    active_border = accent,
-	    inactive_border = bgMuted,
+	    inactive_border = bgMutedPlus,
 	},
 	layout = dwindle,
 	allow_tearing = false,
@@ -15,7 +15,7 @@ hl.config({
 	rounding_power = 1,
 	shadow = {
 	    enabled = true,
-	    color = bgMuted,
+	    color = "rgba(0, 0, 0, 0.4)",
 	}
     },
     animations = {

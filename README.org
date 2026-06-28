@@ -1,15 +1,7 @@
-* MATERIAL ME
+* Forest
+Custom Emacs config found [[https://github.com/nairadithya/.emacs.d][here]].
 
-I use =stow= to manage my dotfiles. I've structured things such that everything is symlinked to =.config= with one command:
+This is what I use everyday.
 
-#+begin_src sh
-stow .
-#+end_src
+If you like it, feel free to steal.
 
-This rice syncs my colourscheme with my [[https:adithyanair.com][website]].
-
-Feel free to clone this repo and modify as needed.
-** Making the wallpaper
-#+begin_src 
-exec ./.config/wallpaper/matugen.sh
-#+end_src

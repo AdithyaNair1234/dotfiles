@@ -48,56 +48,7 @@
 			"on-click-right": "mode",
 		}
 	},
-	"custom/expand": {
-		"format": "",
-		"tooltip": false,
-	},
-	"custom/colorpicker": {
-		"format": "󰈊",
-		"return-type": "json",
-		"interval": "once",
-		"exec": "~/.local/bin/colorpicker -j",
-		"on-click": "~/.local/bin/colorpicker",
-		"signal": 1
-	},
-	"custom/screenshot": {
-		"format": "󱣴",
-		"tooltip-format": "Screenshot",
-		// "return-type": "json",
-		// "interval": "once",
-		// "exec": "~/.local/bin/screenshot.nu",
-		"on-click": "~/.local/bin/screenshot.nu",
-		// "signal": 1
-	},
-	"idle_inhibitor": {
-		"format": "{icon}",
-		"format-icons": {
-			"activated": "󰅶",
-			"deactivated": "󰾪"
-		},
-		"tooltip-format-activated": "Caffeine On",
-		"tooltip-format-deactivated": "Caffeine Off",
-	},
-	"tray": {
-		"icon-size": 24,
-		"spacing": 8
-	},
-	"custom/nightlight": {
-		"tooltip": false,
-		"format": "{text}",
-		"interval": "once",
-		"exec": "sh -c '[[ -n $(hyprctl hyprsunset temperature | rg -o 6000) ]] && printf \"\" || printf 󰤄'",
-		"on-click": "swaync-client -t -sw",
-		"signal": 16,
-	},
-	"power-profiles-daemon": {
-		"format": "{icon}",
-		"tooltip": false,
-		"format-icons": {
-			"performance": "󰓅",
-			"power-saver": "󰾆"
-		}
-	},
+
 	"wireplumber": {
 		"format": "Volume: {volume}% |",
 		"format-muted": "󰝟",
@@ -127,17 +78,17 @@
 		// "on-click": "uwsm app -- footclient --app-id=nmtui sh -c 'sleep 0.1; nmtui'"
 	},
 	"battery": {
-		"interval": 30,
 		"states": {
 			"good": 95,
 			"warning": 30,
 			"critical": 20
 		},
-		"format": "Battery: {capacity}%",
-		"format-charging": "Plugged In: {capacity}% ",
+		"format": "{icon} {capacity}%",
+		"format-charging": "{icon} {capacity}%",
+		"format-plugged": "{icon} {capacity}%",
 		"interval": 15,
 		"tooltip-format": "{capacity}%",
-		"on-click": "swaync-client -t -sw",
+		"on-click": "fnott",
 		"format-icons": {
 			"default": [
 				"󰁺",

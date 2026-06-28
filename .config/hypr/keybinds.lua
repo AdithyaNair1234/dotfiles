@@ -16,7 +16,7 @@ hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + SHIFT + space", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + escape", hl.dsp.exec_cmd("hyprlock"))
-hl.bind("XF86Sleep", hl.dsp.exec_cmd("true"), { locked = true })
+hl.bind("XF86Sleep", hl.dsp.exec_cmd("systemctl suspend"), { locked = true })
 hl.bind(mainMod .. " + SHIFT + R", hl.dsp.exec_cmd(cmenu))
 
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%+"), { locked = true, repeating = true })
